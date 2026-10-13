@@ -6,16 +6,17 @@
 
 /* 1. Design variables */
 :root {
-  --bg: #080b09;
-  --surface: #0e1310;
-  --surface-hover: #131b15;
-  --green: #39ff88;
-  --green-dark: #20c968;
-  --text: #f0f5f1;
-  --muted: #9aa79e;
-  --border: #25352a;
+  --bg: #0C1014;
+  --surface: #162326;
+  --surface-hover: #1C3032;
+  --green: #55D6BE;
+  --green-dark: #36B8A4;
+  --text: #ECF7F5;
+  --muted: #8CA6A4;
+  --border: #2B4142;
   --font: "Segoe UI", Arial, sans-serif;
 }
+
 
 /* 2. Reset and global styles */
 * {
@@ -588,4 +589,194 @@ footer a:hover {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* ==========================================
+   OBSIDIAN TEAL — FINAL COLOUR OVERRIDES
+   Keep this at the very bottom of style.css
+   ========================================== */
+
+/* Page background and subtle teal grid */
+body {
+  background-color: #0C1014;
+  background-image:
+    linear-gradient(rgba(85, 214, 190, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(85, 214, 190, 0.025) 1px, transparent 1px);
+  background-size: 42px 42px;
+}
+
+body::before {
+  background: radial-gradient(
+    ellipse at 50% 0%,
+    rgba(85, 214, 190, 0.09),
+    transparent 58%
+  );
+}
+
+/* Text and navigation */
+body {
+  color: #ECF7F5;
+}
+
+.navbar {
+  background: rgba(12, 16, 20, 0.92);
+  border-bottom-color: rgba(85, 214, 190, 0.2);
+}
+
+.nav-links a:hover,
+footer a:hover {
+  color: #55D6BE;
+}
+
+.nav-links a::after {
+  background: #55D6BE;
+  box-shadow: 0 0 10px rgba(85, 214, 190, 0.45);
+}
+
+.logo span,
+.hero h1 span,
+.accent,
+.eyebrow {
+  color: #55D6BE;
+}
+
+.logo span,
+.hero h1 span {
+  text-shadow: 0 0 24px rgba(85, 214, 190, 0.13);
+}
+
+/* Status indicator */
+.status-dot {
+  background: #55D6BE;
+  box-shadow: 0 0 12px rgba(85, 214, 190, 0.55);
+}
+
+/* Buttons */
+.button.primary {
+  color: #071310;
+  background: #55D6BE;
+  border-color: #55D6BE;
+}
+
+.button.primary:hover {
+  background: #80E8D4;
+  border-color: #80E8D4;
+  box-shadow: 0 0 25px rgba(85, 214, 190, 0.2);
+}
+
+.button.secondary {
+  color: #ECF7F5;
+  background: #162326;
+  border-color: #2B4142;
+}
+
+.button.secondary:hover {
+  color: #55D6BE;
+  border-color: #55D6BE;
+}
+
+/* Terminal */
+.terminal {
+  background: #10191C;
+  border-color: rgba(85, 214, 190, 0.3);
+  box-shadow: 0 20px 65px rgba(0, 0, 0, 0.25);
+}
+
+.terminal-top {
+  background: #162326;
+  border-bottom-color: #2B4142;
+}
+
+.terminal-top > span:nth-child(3) {
+  background: #55D6BE;
+}
+
+.terminal-body .accent,
+.cursor {
+  color: #55D6BE;
+}
+
+.terminal-output {
+  color: #B8CECA;
+}
+
+/* Skills */
+.skill-list span {
+  color: #C5DAD6;
+  background: #162326;
+  border-color: rgba(85, 214, 190, 0.2);
+}
+
+.skill-list span:hover {
+  color: #55D6BE;
+  background: #1C3032;
+  border-color: #55D6BE;
+  box-shadow: 0 5px 20px rgba(85, 214, 190, 0.07);
+}
+
+/* Project cards */
+.project-card {
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(85, 214, 190, 0.07),
+      transparent 48%
+    ),
+    linear-gradient(145deg, #162326, #0E1518);
+  border-color: rgba(85, 214, 190, 0.2);
+}
+
+.project-card::before {
+  background: #55D6BE;
+}
+
+.project-card:hover {
+  border-color: rgba(85, 214, 190, 0.55);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.25);
+}
+
+.project-number {
+  color: #55D6BE;
+}
+
+.tags span {
+  color: #C5DAD6;
+  background: #203234;
+  border-color: rgba(85, 214, 190, 0.15);
+}
+
+.project-status {
+  border-left-color: #36B8A4;
+}
+
+/* Sections and footer */
+#about,
+#projects,
+.contact,
+footer {
+  border-top-color: rgba(85, 214, 190, 0.18);
+}
+
+footer {
+  background: rgba(12, 16, 20, 0.8);
+}
+
+/* Mobile navigation */
+@media (max-width: 760px) {
+  .nav-links {
+    background: #0C1014;
+    border-bottom-color: #2B4142;
+  }
+
+  .menu-toggle {
+    color: #55D6BE;
+    border-color: #2B4142;
+  }
+}
+
+/* Accessibility: keep focus visible for keyboard users */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #55D6BE;
+  outline-offset: 4px;
 }
