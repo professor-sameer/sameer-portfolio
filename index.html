@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sameer Nayak's personal portfolio showcasing software development, Python, SQL and Data Engineering projects.">
+  <title>Sameer Nayak | Developer Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="#home">SN<span>.</span></a>
+
+    <button class="menu-toggle" aria-label="Toggle navigation"
+      aria-expanded="false">☰</button>
+
+    <nav class="nav-links" id="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <p class="eyebrow"><span class="status-dot"></span> BUILDING MY NEXT CHAPTER</p>
+
+      <h1>Hi, I'm <span>Sameer Nayak.</span></h1>
+
+      <h2>Developer in progress. <br>
+        <span class="accent">Data Engineer in the making.</span>
+      </h2>
+
+      <p class="hero-description">
+        I enjoy building practical projects, exploring Python and SQL,
+        and learning how technology turns data into useful solutions.
+      </p>
+
+      <div class="hero-actions">
+        <a class="button primary" href="#projects">Explore my work ↗</a>
+        <a class="button secondary" href="#contact">Let's connect</a>
+      </div>
+
+      <div class="terminal">
+        <div class="terminal-top">
+          <span></span><span></span><span></span>
+          <p>sameer@portfolio: ~</p>
+        </div>
+        <div class="terminal-body">
+          <p><span class="accent">$</span> whoami</p>
+          <p class="terminal-output">Sameer Nayak</p>
+          <p><span class="accent">$</span> current_focus</p>
+          <p class="terminal-output">Python · SQL · Data Engineering</p>
+          <p><span class="accent">$</span> status</p>
+          <p class="terminal-output">Learning, building, improving<span class="cursor">_</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <p class="eyebrow">01 / ABOUT ME</p>
+      <h2 class="section-title">Curious by nature.<br><span class="accent">Technical by ambition.</span></h2>
+      <p class="section-description">
+        I'm a Computer Science graduate working at TCS in Talent Development.
+        Alongside my professional experience, I'm developing my programming
+        skills and building hands-on projects as I work toward a technical role.
+      </p>
+      <p class="section-description">
+        My approach is simple: learn the fundamentals, build real things,
+        understand how they work, and keep getting better.
+      </p>
+    </section>
+
+    <section class="section" id="skills">
+      <p class="eyebrow">02 / TOOLKIT</p>
+      <h2 class="section-title">Skills I'm developing</h2>
+      <div class="skill-list">
+        <span>Python</span>
+        <span>SQL</span>
+        <span>Java</span>
+        <span>C / C++</span>
+        <span>HTML & CSS</span>
+        <span>JavaScript</span>
+        <span>Git & GitHub</span>
+        <span>Databricks</span>
+        <span>Linux fundamentals</span>
+      </div>
+      <p class="note">Skills and proficiency levels will be refined as projects progress.</p>
+    </section>
+
+    <section class="section" id="projects">
+      <p class="eyebrow">03 / SELECTED WORK</p>
+      <h2 class="section-title">Projects & experiments</h2>
+      <p class="section-description">
+        A collection of things I'm building and learning from.
+      </p>
+
+      <div class="project-grid">
+        <article class="project-card">
+          <p class="project-number">PROJECT_01</p>
+          <h3>JARVIS — Local AI Assistant</h3>
+          <p>
+            An ongoing Python project exploring local language models,
+            persistent memory, intent routing and task management.
+          </p>
+          <div class="tags"><span>Python</span><span>Ollama</span><span>SQLite</span></div>
+          <span class="project-status">In progress</span>
+        </article>
+
+        <article class="project-card">
+          <p class="project-number">PROJECT_02</p>
+          <h3>Photo to ASCII Art</h3>
+          <p>
+            A Python experiment that converts photos into character-based
+            artwork, with a focus on detail, contrast and a black background.
+          </p>
+          <div class="tags"><span>Python</span><span>Image processing</span></div>
+          <span class="project-status">In progress</span>
+        </article>
+
+        <article class="project-card">
+          <p class="project-number">PROJECT_03</p>
+          <h3>Data Engineering Lab</h3>
+          <p>
+            A planned hands-on project to explore data ingestion,
+            SQL transformations and a simple end-to-end data pipeline.
+          </p>
+          <div class="tags"><span>SQL</span><span>Python</span><span>Data pipelines</span></div>
+          <span class="project-status">Planned</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <p class="eyebrow">04 / CONTACT</p>
+      <h2 class="section-title">Let's build something <span class="accent">useful.</span></h2>
+      <p class="section-description">
+        Interested in connecting about technology, projects or technical opportunities?
+      </p>
+      <div class="hero-actions">
+        <a class="button primary" href="mailto:YOUR_EMAIL@example.com">Email me ↗</a>
+        <a class="button secondary" href="https://github.com/" target="_blank"
+          rel="noopener noreferrer">GitHub ↗</a>
+        <a class="button secondary" href="https://www.linkedin.com/" target="_blank"
+          rel="noopener noreferrer">LinkedIn ↗</a>
+      </div>
+      <p class="note">Replace the placeholder links with your real profiles before publishing.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Designed & built by Sameer Nayak <span class="accent">©</span> <span id="year"></span></p>
+    <a href="#home">Back to top ↑</a>
+  </footer>
+</body>
+</html>
