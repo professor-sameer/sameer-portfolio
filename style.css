@@ -1477,3 +1477,313 @@ section[id] {
     font-size: 22px;
   }
 }
+
+/* ==============================
+   ACHIEVEMENTS SECTION
+   ============================== */
+
+#achievements {
+    padding: 80px 8%;
+    scroll-margin-top: 100px;
+}
+
+#achievements .section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#achievements .section-heading {
+    margin-bottom: 36px;
+}
+
+#achievements .section-label {
+    color: var(--green);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+#achievements .section-heading h2 {
+    color: var(--text);
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    margin: 12px 0;
+}
+
+#achievements .section-heading > p:last-child {
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.achievement-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 26px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.achievement-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--green);
+}
+
+.achievement-icon {
+    font-size: 1.8rem;
+    margin-bottom: 14px;
+}
+
+.achievement-card h3 {
+    color: var(--text);
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin: 0 0 10px;
+}
+
+.achievement-card p {
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+.achievement-type {
+    display: inline-block;
+    color: var(--green);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.achievement-link {
+    display: inline-block;
+    color: var(--green);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    margin-top: 4px;
+}
+
+.achievement-link:hover {
+    color: var(--text);
+    text-decoration: underline;
+}
+
+@media (max-width: 650px) {
+    #achievements {
+        padding: 60px 5%;
+    }
+
+    .achievements-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .achievement-card {
+        padding: 22px;
+    }
+}
+
+
+/* ==============================
+   HERO: TWO-COLUMN LAYOUT FIX
+   ============================== */
+
+#home.hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    align-items: center;
+    gap: clamp(32px, 4vw, 60px);
+
+    width: min(1200px, 100%);
+    margin-inline: auto;
+    padding-inline: clamp(24px, 5vw, 64px);
+
+    box-sizing: border-box;
+}
+
+#home .hero-content {
+    min-width: 0;
+    width: 100%;
+}
+
+
+#home .terminal {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    align-self: center;
+    transform: translateX(20px);
+}
+
+
+#home .terminal-body {
+    overflow-wrap: anywhere;
+    word-break: normal;
+}
+
+#home .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+@media (max-width: 900px) {
+    #home.hero {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 36px;
+        padding-inline: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    #home.hero {
+        padding-inline: 18px;
+    }
+}
+
+/* Consistent terminal spacing and alignment */
+
+#home .terminal-header {
+    padding: 16px 24px;
+    box-sizing: border-box;
+}
+
+#home .terminal-body {
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+#home .terminal-body .terminal-line {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 10px;
+    margin: 0 0 12px;
+}
+
+#home .terminal-body .terminal-output {
+    margin: 0 0 26px;
+    padding-left: 24px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+#home .terminal-body .terminal-last {
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+/* Reduce the gap before the Skills section */
+#skills {
+    padding-top: 40px;
+    margin-top: 0;
+}
+
+/* Navbar link interaction */
+nav a {
+    position: relative;
+    text-decoration: none;
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease;
+    border-radius: 6px;
+    padding: 8px 10px;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 3px;
+    height: 2px;
+    background: var(--green);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    color: var(--green);
+    background: var(--surface);
+}
+
+nav a:hover::after,
+nav a:focus-visible::after {
+    transform: scaleX(1);
+}
+
+/* Active navigation link */
+nav a.active {
+    color: var(--green);
+    background: var(--surface);
+}
+
+nav a.active::after {
+    transform: scaleX(1);
+}
+
+/* Mobile hero alignment */
+@media (max-width: 600px) {
+    #home.hero {
+        width: 100%;
+        padding: 32px 18px 40px;
+        gap: 28px;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    #home .hero-content {
+        width: 100%;
+        min-width: 0;
+    }
+
+    #home .hero-content h1 {
+        overflow-wrap: anywhere;
+    }
+
+    #home .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    #home .terminal {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        margin: 0;
+        transform: none;
+    }
+
+    #home .terminal-header {
+        padding: 14px 16px;
+    }
+
+    #home .terminal-body {
+        padding: 18px 16px;
+    }
+
+    #home .terminal-body .terminal-output {
+        padding-left: 12px;
+    }
+}
+
+/* Mobile section positioning */
+@media (max-width: 600px) {
+    #home,
+    #about,
+    #skills,
+    #projects,
+    #achievements,
+    #contact {
+        scroll-margin-top: 85px;
+    }
+}
